@@ -1,0 +1,27 @@
+
+<script>
+
+
+    function initColSwitch() {
+
+        var wrapper = document.querySelector(".traversing-component");
+        var elements = wrapper.querySelectorAll("li");
+
+        for (let i = 0; i < elements.length; ++i) {
+
+            var element = elements[i];
+            element.classList.remove('col-md-4');
+            element.classList.add('col-md-3');
+            element.classList.remove('col-lg-4');
+            element.classList.remove('col-lg-3');
+
+        }
+    }
+
+    if (document.readyState == 'loading') {
+        document.addEventListener('DOMContentLoaded', initColSwitch);
+    } else {
+        initColSwitch();
+    }
+
+</script>
